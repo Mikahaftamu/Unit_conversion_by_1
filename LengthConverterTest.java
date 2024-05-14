@@ -21,4 +21,17 @@ public class LengthConverterTest {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> LengthConverter.convertFromMeters(lengthInMeters, "invalid"));
     }
+
+    @Test
+    public void testConvertFromKilo() {
+        double lengthkilo = 10.0;
+
+        Assertions.assertEquals(110.0, LengthConverter.convertFromKilometer(lengthkilo, "m"));
+        Assertions.assertEquals(0.01, LengthConverter.convertFromKilometer(lengthkilo, "cm"));
+        Assertions.assertEquals(10000.0, LengthConverter.convertFromKilometer(lengthkilo, "mm"));
+        Assertions.assertEquals(0.00621371, LengthConverter.convertFromKilometer(lengthkilo, "mi"), 0.000001);
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> LengthConverter.convertFromMeters(lengthkilo, "invalid"));
+    }
+
 }
