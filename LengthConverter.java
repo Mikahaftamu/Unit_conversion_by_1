@@ -36,4 +36,29 @@ public class LengthConverter {
         }
     }
 
+    public static double convertFromKilometer(double kilo, String unit) {
+        unit = unit.toLowerCase();
+
+        switch (unit) {
+            case "m":
+            case "meter":
+            case "meters":
+                return kilo * 1000;
+            case "cm":
+            case "centimeter":
+            case "centimeters":
+                return kilo * 10000;
+            case "mm":
+            case "millimeter":
+            case "millimeters":
+                return kilo * 1000000;
+            case "mile":
+            case "ml":
+                return kilo * 0.621 ;
+           
+            default:
+                throw new IllegalArgumentException("Invalid unit: " + unit);
+        }
+    }
+
 }
