@@ -61,4 +61,26 @@ public class LengthConverter {
         }
     }
 
+    public static double convertFromcentimeter(double cm, String unit) {
+        unit = unit.toLowerCase();
+
+        switch (unit) {
+            case "m":
+            case "meter":
+            case "meters":
+                return cm / 100;
+            
+            case "mm":
+            case "millimeter":
+            case "millimeters":
+                return cm * 10;
+            case "kilo":
+            case "kilometer":
+                return cm /1000 ;
+           
+            default:
+                throw new IllegalArgumentException("Invalid unit: " + unit);
+        }
+    }
+
 }
