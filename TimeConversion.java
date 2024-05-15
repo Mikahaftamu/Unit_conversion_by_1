@@ -8,4 +8,12 @@ public class TimeConversion {
         int minutes = seconds / 60;
         return minutes / 60;
     }
+
+    public static int convertMinutesToSeconds(int minutes) {
+        return minutes * 60;
+    }
+
+    public static int convertMinutesToHours(int minutes) {
+        return minutes / 60;
+    }
 }
