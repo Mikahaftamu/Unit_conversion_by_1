@@ -20,4 +20,12 @@ public class TimeConversionTest {
         assertEquals(2, TimeConversion.convertSecondsToHours(7200));
     }
 
+    @Test
+    public void testConvertMinutesToSeconds() {
+        assertEquals(3661, TimeConversion.convertMinutesToSeconds(61));
+        assertEquals(0, TimeConversion.convertMinutesToSeconds(0));
+        assertEquals(60, TimeConversion.convertMinutesToSeconds(1));
+        assertEquals(3600, TimeConversion.convertMinutesToSeconds(60));
+    }
+
 }
