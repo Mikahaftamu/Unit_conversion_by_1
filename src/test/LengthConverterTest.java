@@ -46,4 +46,24 @@ public class LengthConverterTest {
         assertEquals(expected2, actual2, 0.01);
 
     }
+    @Test
+    public void testConvertFromcm() {
+        double lengthincm = 1000.0;
+
+
+        double actual5 =LengthConverter.convertFromcentimeter(lengthincm, "m");
+        double expected5= 10;
+        assertEquals(expected5, actual5, 0.01);
+
+        
+        double actual1 =LengthConverter.convertFromcentimeter(lengthincm, "km");
+        double expected1= 1.0;
+        assertEquals(expected1, actual1, 0.01);
+
+        double actual2 =LengthConverter.convertFromcentimeter(lengthincm, "mm");
+        double expected2= 10000.0;
+        assertEquals(expected2, actual2, 0.01);
+    }
+
+
 }

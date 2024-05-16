@@ -57,8 +57,31 @@ public class LengthConverter {
             case "millimeters":
                 return cm * 10;
             case "kilo":
+            case"km":
             case "kilometer":
                 return cm /1000 ;
+           
+            default:
+                throw new IllegalArgumentException("Invalid unit: " + unit);
+        }
+    }
+
+    public static double convertFrommilimeter(double mm, String unit) {
+        unit = unit.toLowerCase();
+
+        switch (unit) {
+            case "m":
+            case "meter":
+            case "meters":
+                return mm / 1000;
+            
+            case "cm":
+            case "centimeter":
+        
+                return mm * 10;
+            case "kilo":
+            case "kilometer":
+                return mm /10000 ;
            
             default:
                 throw new IllegalArgumentException("Invalid unit: " + unit);
