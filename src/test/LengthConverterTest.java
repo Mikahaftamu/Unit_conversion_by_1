@@ -61,7 +61,7 @@ public class LengthConverterTest {
         assertEquals(expected1, actual1, 0.01);
 
         double actual2 =LengthConverter.convertFromcentimeter(lengthincm, "mm");
-        double expected2= 10000.0;
+        double expected2= 100000.0;
         assertEquals(expected2, actual2, 0.01);
     }
 
