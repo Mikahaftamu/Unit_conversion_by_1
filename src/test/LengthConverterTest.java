@@ -61,9 +61,25 @@ public class LengthConverterTest {
         assertEquals(expected1, actual1, 0.01);
 
         double actual2 =LengthConverter.convertFromcentimeter(lengthincm, "mm");
-        double expected2= 10000.0;
+        double expected2= 100000.0;
         assertEquals(expected2, actual2, 0.01);
     }
 
+    @Test
+    public void testConvertFrommm() {
+        double lengthinmm = 10000.0;
 
+        double actual5 =LengthConverter.convertFrommilimeter(lengthinmm, "m");
+        double expected5= 10.0;
+        assertEquals(expected5, actual5, 0.01);
+
+        
+        double actual1 =LengthConverter.convertFrommilimeter(lengthinmm, "kilo");
+        double expected1= 1.0;
+        assertEquals(expected1, actual1, 0.01);
+
+        double actual2 =LengthConverter.convertFrommilimeter(lengthinmm, "cm");
+        double expected2= 1000.0;
+        assertEquals(expected2, actual2, 0.01);
+    }
 }
