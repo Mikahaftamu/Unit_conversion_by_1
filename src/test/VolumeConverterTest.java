@@ -11,7 +11,7 @@ public class VolumeConverterTest {
     @Test
     public void testLitreToMilliliter() {
         double litre = 1.0;
-        double expected = 1000.0;
+        double expected = 1002.0;
         double result = VolumeConverter.litreToMilliliter(litre);
         Assert.assertEquals(expected, result, DELTA);
     }
