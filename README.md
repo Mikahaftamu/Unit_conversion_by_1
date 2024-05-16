@@ -3,9 +3,9 @@
 
 **Authors**
 
-* [Dawit Getachew] --> EITM/UR179017/12
-* [Betelihem Araya] --> UGR/178195/12
-* [Amare Birhane] --> UGR/171995/12
+* Dawit Getachew --> EITM/UR179017/12
+* Betelihem Araya --> UGR/178195/12
+* Amare Birhane --> UGR/171995/12
 * Mikiyas Haftamu --> UGR/170241/12
 * Biniyam Tesfay -->
 
@@ -24,6 +24,7 @@ And implements various unit testing scenarios using the JUnit testing framework.
 
 1. **Prerequisites:**
    * Java Development Kit (JDK) (https://www.oracle.com/java/technologies/downloads/)
+   * JUnit testing framework
 2. **Installation:**
    * Clone or download this repository.
    * Open the cloned folder in your prefered IDE
