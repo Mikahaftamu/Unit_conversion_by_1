@@ -45,7 +45,7 @@ public class VolumeConverter {
         return cubicMeter * 1000000;
     }
 
-    public static double milliliterToCubicMeter(double milliliter) {
+    public static double milliliter_To_CubicMeter(double milliliter) {
         return milliliter / 1000000;
     }
 }

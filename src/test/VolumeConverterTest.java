@@ -96,4 +96,11 @@ public class VolumeConverterTest {
         Assert.assertEquals(expected, result, DELTA);
     }
 
+    @Test
+    public void testMilliliterToCubicMeter() {
+        double milliliter = 1000.0;
+        double expected = 0.001;
+        double result = VolumeConverter.milliliter_To_CubicMeter(milliliter);
+        Assert.assertEquals(expected, result, DELTA);
+    }
 }
