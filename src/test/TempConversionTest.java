@@ -1,4 +1,7 @@
+package test;
 import org.junit.*;
+
+import main.TempConversion;
 
 import static org.junit.Assert.*;
 
