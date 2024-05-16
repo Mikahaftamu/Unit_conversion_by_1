@@ -52,7 +52,7 @@ public class LengthConverterTest {
 
 
         double actual5 =LengthConverter.convertFromcentimeter(lengthincm, "m");
-        double expected5= 10;
+        double expected5= 10.0;
         assertEquals(expected5, actual5, 0.01);
 
         
