@@ -11,7 +11,7 @@ public class VolumeConverterTest {
     @Test
     public void testLitreToMilliliter() {
         double litre = 1.0;
-        double expected = 1002.0;
+        double expected = 1000.0;
         double result = VolumeConverter.litreToMilliliter(litre);
         Assert.assertEquals(expected, result, DELTA);
     }
@@ -35,7 +35,7 @@ public class VolumeConverterTest {
     @Test
     public void testCubicMeterToLitre() {
         double cubicMeter = 0.001;
-        double expected = 2.0;
+        double expected = 1.0;
         double result = VolumeConverter.cubicMeterToLitre(cubicMeter);
         Assert.assertEquals(expected, result, DELTA);
     }
