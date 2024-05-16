@@ -10,7 +10,7 @@ public class LengthConverterTest {
 
     @Test
     public void testConvertFromMeters() {
-        double lengthInMeters=10.0;
+        double lengthInMeters=10.00;
 
         double actual5 =LengthConverter.convertFromMeters(lengthInMeters, "km");
         double expected5= 0.01;
