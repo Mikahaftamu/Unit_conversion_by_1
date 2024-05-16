@@ -63,6 +63,7 @@ public class App {
 
     // this is volume
     public static void volumeConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Select conversion option:");
