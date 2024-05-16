@@ -1,5 +1,6 @@
 package main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -61,7 +62,6 @@ public class App {
         System.out.println("Weight Conversion Functionality");
     }
 
-    // this is volume
     public static void volumeConversion() {
         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
@@ -87,76 +87,220 @@ public class App {
 
         switch (option) {
             case 1:
-                System.out.print("Enter value in litres: ");
-                value = scanner.nextDouble();
-                double milliliter = VolumeConverter.litreToMilliliter(value);
-                System.out.println(value + " litres = " + milliliter + " milliliters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in litres: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double milliliter = VolumeConverter.litreToMilliliter(value);
+                            System.out.println(value + " litres = " + milliliter + " milliliters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 2:
-                System.out.print("Enter value in milliliters: ");
-                value = scanner.nextDouble();
-                double litre = VolumeConverter.milliliterToLitre(value);
-                System.out.println(value + " milliliters = " + litre + " litres");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in milliliters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double litre = VolumeConverter.milliliterToLitre(value);
+                            System.out.println(value + " milliliters = " + litre + " litres");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 3:
-                System.out.print("Enter value in litres: ");
-                value = scanner.nextDouble();
-                double cubicMeter = VolumeConverter.litreToCubicMeter(value);
-                System.out.println(value + " litres = " + cubicMeter + " cubic meters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in litres: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicMeter = VolumeConverter.litreToCubicMeter(value);
+                            System.out.println(value + " litres = " + cubicMeter + " cubic meters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 4:
-                System.out.print("Enter value in cubic meters: ");
-                value = scanner.nextDouble();
-                double convertedLitre2 = VolumeConverter.cubicMeterToLitre(value);
-                System.out.println(value + " cubic meters = " + convertedLitre2 + " litres");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic meters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double convertedLitre2 = VolumeConverter.cubicMeterToLitre(value);
+                            System.out.println(value + " cubic meters = " + convertedLitre2 + " litres");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 5:
-                System.out.print("Enter value in litres: ");
-                value = scanner.nextDouble();
-                double cubicCentimeter = VolumeConverter.litreToCubicCentimeter(value);
-                System.out.println(value + " litres = " + cubicCentimeter + " cubic centimeters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in litres: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicCentimeter = VolumeConverter.litreToCubicCentimeter(value);
+                            System.out.println(value + " litres = " + cubicCentimeter + " cubic centimeters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 6:
-                System.out.print("Enter value in cubic centimeters: ");
-                value = scanner.nextDouble();
-                double convertedLitre3 = VolumeConverter.cubicCentimeterToLitre(value);
-                System.out.println(value + " cubic centimeters = " + convertedLitre3 + " litres");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic centimeters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double convertedLitre2 = VolumeConverter.cubicCentimeterToLitre(value);
+                            System.out.println(value + " cubic centimeters = " + convertedLitre2 + " litres");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 7:
-                System.out.print("Enter value in milliliters: ");
-                value = scanner.nextDouble();
-                double cubicCentimeter2 = VolumeConverter.milliliterToCubicCentimeter(value);
-                System.out.println(value + " milliliters = " + cubicCentimeter2 + " cubic centimeters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in milliliters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicCentimeter2 = VolumeConverter.milliliterToCubicCentimeter(value);
+                            System.out.println(value + " milliliters = " + cubicCentimeter2 + " cubic centimeters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 8:
-                System.out.print("Enter value in cubic centimeters: ");
-                value = scanner.nextDouble();
-                double convertedMilliliter = VolumeConverter.cubicCentimeterToMilliliter(value);
-                System.out.println(value + " cubic centimeters = " + convertedMilliliter + " milliliters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic centimeters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double convertedMilliliter = VolumeConverter.cubicCentimeterToMilliliter(value);
+                            System.out.println(value + " cubic centimeters = " + convertedMilliliter + " milliliters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 9:
-                System.out.print("Enter value in cubic centimeters: ");
-                value = scanner.nextDouble();
-                double cubicMeter2 = VolumeConverter.cubicCentimeterToCubicMeter(value);
-                System.out.println(value + " cubic centimeters = " + cubicMeter2 + " cubic meters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic centimeters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicMeter2 = VolumeConverter.cubicCentimeterToCubicMeter(value);
+                            System.out.println(value + " cubic centimeters = " + cubicMeter2 + " cubic meters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 10:
-                System.out.print("Enter value in cubic meters: ");
-                value = scanner.nextDouble();
-                double cubicCentimeter3 = VolumeConverter.cubicMeterToCubicCentimeter(value);
-                System.out.println(value + " cubic meters = " + cubicCentimeter3 + " cubic centimeters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic meters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicCentimeter3 = VolumeConverter.cubicMeterToCubicCentimeter(value);
+                            System.out.println(value + " cubic meters = " + cubicCentimeter3 + " cubic centimeters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 11:
-                System.out.print("Enter value in cubic meters: ");
-                value = scanner.nextDouble();
-                double milliliter2 = VolumeConverter.cubicMeter_To_Milliliter(value);
-                System.out.println(value + " cubic meters = " + milliliter2 + " milliliters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in cubic meters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double milliliter2 = VolumeConverter.cubicMeter_To_Milliliter(value);
+                            System.out.println(value + " cubic meters = " + milliliter2 + " milliliters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 12:
-                System.out.print("Enter value in milliliters: ");
-                value = scanner.nextDouble();
-                double cubicMeter3 = VolumeConverter.milliliter_To_CubicMeter(value);
-                System.out.println(value + " milliliters = " + cubicMeter3 + " cubicmeters");
+                while (true) {
+                    try {
+                        System.out.print("Enter value in milliliters: ");
+                        value = scanner.nextDouble();
+                        if (value >= 0) {
+                            double cubicMeter3 = VolumeConverter.milliliter_To_CubicMeter(value);
+                            System.out.println(value + " milliliters = " + cubicMeter3 + " cubicmeters");
+                            break;
+                        } else {
+                            System.out.println("Invalid input. Value must be positive.");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next(); // clear the invalid input
+                    }
+                }
                 break;
             case 13:
                 System.out.println("Returning to Main Menu...");
@@ -164,8 +308,6 @@ public class App {
             default:
                 System.out.println("Invalid option");
         }
-
-        // scanner.close();
     }
 
     public static void temperatureConversion() {
