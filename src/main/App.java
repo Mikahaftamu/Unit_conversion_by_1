@@ -1,4 +1,6 @@
 package main;
+
+import java.sql.Time;
 import java.util.Scanner;
 
 public class App {
@@ -12,8 +14,9 @@ public class App {
             System.out.println("1. Length Conversion");
             System.out.println("2. Weight Conversion");
             System.out.println("3. Temperature Conversion");
-            // Add more options for other conversions
-            System.out.println("4. Exit");
+            System.out.println("4. Time Conversion");
+            System.out.println("5. Volume Conversion");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -32,6 +35,14 @@ public class App {
                     temperatureConversion();
                     break;
                 case 4:
+                    // Call function for temperature conversion
+                    timeConversion();
+                    break;
+                case 5:
+                    // Call function for temperature conversion
+                    volumeConversion();
+                    break;
+                case 6:
                     System.out.println("Exiting Unit Converter...");
                     break;
                 default:
@@ -39,10 +50,14 @@ public class App {
             }
         } while (choice != 4);
 
-        scanner.close();
     }
 
     public static void lengthConversion() {
+        // Implement length conversion logic here
+        System.out.println("Length Conversion Functionality");
+    }
+
+    public static void volumeConversion() {
         // Implement length conversion logic here
         System.out.println("Length Conversion Functionality");
     }
@@ -122,6 +137,75 @@ public class App {
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
-        scanner.close();
+    }
+
+    public static void timeConversion() {
+        Scanner scanner = new Scanner(System.in);
+        int tempChoice;
+
+        System.out.println("\nTime Conversion Submenu");
+        System.out.println("------------------------------");
+        System.out.println("1. Hours (H) to Minutes (M)");
+        System.out.println("2. Hours (H) to Seconds (S)");
+        System.out.println("3. Seconds (S) to Minutes (M)");
+        System.out.println("4. Seconds (S) to Hours (H)");
+        System.out.println("5. Minutes (M) to Seconds (S)");
+        System.out.println("6. Minutes (M) to Hours (H)");
+        System.out.println("7. Back to Main Menu");
+        System.out.print("Enter your choice: ");
+
+        tempChoice = scanner.nextInt();
+
+        switch (tempChoice) {
+            case 1:
+                System.out.print("Enter time in Hours: ");
+                int time = scanner.nextInt();
+
+                // double fahrenheit = TimeConversion.celsiusToFahrenheit(celsius);
+                // System.out.println(celsius + " degrees Celsius is equal to " + fahrenheit + " degrees Fahrenheit.");
+                break;
+            case 2:
+                // Get temperature in Fahrenheit
+                System.out.print("Enter time in Hours: ");
+                // fahrenheit = scanner.nextDouble();
+
+                // // Call method from TemperatureConverter class
+                // celsius = TempConversion.fahrenheitToCelsius(fahrenheit);
+                // System.out.println(fahrenheit + " degrees Fahrenheit is equal to " + celsius + " degrees Celsius.");
+                break;
+            case 3:
+                // Celsius to Kelvin
+                System.out.print("Enter time in Seconds: ");
+                time = scanner.nextInt();
+                double minutes = TimeConversion.convertSecondsToMinutes(time);
+                System.out.println(time + " seconds is equal to " + minutes + " minutes.");
+                break;
+            case 4:
+                // Kelvin to Celsius
+                System.out.print("Enter time in Seconds: ");
+                time = scanner.nextInt();
+                minutes = TimeConversion.convertSecondsToHours(time);
+                System.out.println(time + " seconds is equal to " + minutes + " hours.");
+                break;
+            case 5:
+                // Fahrenheit to Kelvin
+                System.out.print("Enter time in Minutes: ");
+                time = scanner.nextInt();
+                minutes = TimeConversion.convertMinutesToSeconds(time);
+                System.out.println(time + " minutes is equal to " + minutes + " seconds.");
+                break;
+            case 6:
+                // Kelvin to Fahrenheit
+                System.out.print("Enter time in Minutes: ");
+                time = scanner.nextInt();
+                minutes = TimeConversion.convertMinutesToHours(time);
+                System.out.println(time + " minutes is equal to " + minutes + " hours.");
+                break;
+            case 7:
+                System.out.println("Returning to Main Menu...");
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
     }
 }
