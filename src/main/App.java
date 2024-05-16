@@ -262,43 +262,35 @@ public class App {
                 System.out.print("Enter time in Hours: ");
                 int time = scanner.nextInt();
 
-                // double fahrenheit = TimeConversion.celsiusToFahrenheit(celsius);
-                // System.out.println(celsius + " degrees Celsius is equal to " + fahrenheit + "
-                // degrees Fahrenheit.");
+                double mins = TimeConversion.convertHoursToMinutes(time);
+                System.out.println(time+ " hours is equal to " + mins + " minutes.");
                 break;
             case 2:
-                // Get temperature in Fahrenheit
                 System.out.print("Enter time in Hours: ");
-                // fahrenheit = scanner.nextDouble();
+                time = scanner.nextInt();
 
-                // // Call method from TemperatureConverter class
-                // celsius = TempConversion.fahrenheitToCelsius(fahrenheit);
-                // System.out.println(fahrenheit + " degrees Fahrenheit is equal to " + celsius
-                // + " degrees Celsius.");
+                mins = TimeConversion.convertHoursToSeconds(time);
+                System.out.println(time + " hours is equal to " + mins + " seconds.");
                 break;
             case 3:
-                // Celsius to Kelvin
                 System.out.print("Enter time in Seconds: ");
                 time = scanner.nextInt();
                 double minutes = TimeConversion.convertSecondsToMinutes(time);
                 System.out.println(time + " seconds is equal to " + minutes + " minutes.");
                 break;
             case 4:
-                // Kelvin to Celsius
                 System.out.print("Enter time in Seconds: ");
                 time = scanner.nextInt();
                 minutes = TimeConversion.convertSecondsToHours(time);
                 System.out.println(time + " seconds is equal to " + minutes + " hours.");
                 break;
             case 5:
-                // Fahrenheit to Kelvin
                 System.out.print("Enter time in Minutes: ");
                 time = scanner.nextInt();
                 minutes = TimeConversion.convertMinutesToSeconds(time);
                 System.out.println(time + " minutes is equal to " + minutes + " seconds.");
                 break;
             case 6:
-                // Kelvin to Fahrenheit
                 System.out.print("Enter time in Minutes: ");
                 time = scanner.nextInt();
                 minutes = TimeConversion.convertMinutesToHours(time);
@@ -311,6 +303,7 @@ public class App {
                 System.out.println("Invalid choice. Please try again.");
         }
     }
+
 }
 
 //
