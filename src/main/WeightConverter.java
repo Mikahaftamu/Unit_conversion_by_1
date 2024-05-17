@@ -30,5 +30,12 @@ public class WeightConverter {
     public static double kilogramToPound(double kilogram) {
         return kilogram / 0.453592;
     }
+    public static double poundToGram(double pound) {
+        return pound * 453.592;
+    }
+
+    public static double gramToPound(double gram) {
+        return gram / 453.592;
+    }
 
 }
