@@ -23,5 +23,12 @@ public class WeightConverter {
     public static double kilogramToMilligram(double kilogram) {
         return kilogram * 1_000_000;
     }
+    public static double poundToKilogram(double pound) {
+        return pound * 0.453592;
+    }
+
+    public static double kilogramToPound(double kilogram) {
+        return kilogram / 0.453592;
+    }
 
 }
