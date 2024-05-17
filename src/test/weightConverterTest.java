@@ -36,6 +36,17 @@ public class weightConverterTest {
         double result = WeightConverter.kilogramToMilligram(3.5);
         Assert.assertEquals(3500000, result, 0.0001);
     }
+    @Test
+    public void testPoundToKilogram() {
+        double result = WeightConverter.poundToKilogram(10);
+        Assert.assertEquals(4.53592, result, 0.0001);
+    }
+
+    @Test
+    public void testKilogramToPound() {
+        double result = WeightConverter.kilogramToPound(5.5);
+        Assert.assertEquals(12.12542454, result, 0.0001);
+    }
 
 
 }
