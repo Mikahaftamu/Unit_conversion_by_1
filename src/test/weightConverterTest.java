@@ -59,6 +59,19 @@ public class weightConverterTest {
         Assert.assertEquals(4.40924524, result, 0.0001);
     }
 
+    @Test
+    public void testPoundToMilligram() {
+        double result = WeightConverter.poundToMilligram(8);
+        Assert.assertEquals(3628738.96, result, 0.01);
+    }
+
+    @Test
+    public void testMilligramToPound() {
+        double result = WeightConverter.milligramToPound(5000000);
+        Assert.assertEquals(11.02311311, result, 0.0001);
+    }
+}
+
 
 }
 
