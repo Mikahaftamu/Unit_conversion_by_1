@@ -37,5 +37,12 @@ public class WeightConverter {
     public static double gramToPound(double gram) {
         return gram / 453.592;
     }
-  
+    public static double poundToMilligram(double pound) {
+        return pound * 453_592.37;
+    }
+
+    public static double milligramToPound(double milligram) {
+        return milligram / 453_592.37;
+    }
+ 
 }
