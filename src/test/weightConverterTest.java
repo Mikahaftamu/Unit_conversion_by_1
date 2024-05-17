@@ -47,6 +47,17 @@ public class weightConverterTest {
         double result = WeightConverter.kilogramToPound(5.5);
         Assert.assertEquals(12.12542454, result, 0.0001);
     }
+    @Test
+    public void testPoundToGram() {
+        double result = WeightConverter.poundToGram(2.75);
+        Assert.assertEquals(1247.819, result, 0.001);
+    }
+
+    @Test
+    public void testGramToPound() {
+        double result = WeightConverter.gramToPound(2000);
+        Assert.assertEquals(4.40924524, result, 0.0001);
+    }
 
 
 }
