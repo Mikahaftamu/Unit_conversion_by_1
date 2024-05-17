@@ -25,6 +25,18 @@ public class weightConverterTest {
         double result = WeightConverter.gramToMilligram(3.5);
         Assert.assertEquals(3500, result, 0.0001);
     }
+    @Test
+    public void testMilligramToKilogram() {
+        double result = WeightConverter.milligramToKilogram(2000000);
+        Assert.assertEquals(2, result, 0.0001);
+    }
+
+    @Test
+    public void testKilogramToMilligram() {
+        double result = WeightConverter.kilogramToMilligram(3.5);
+        Assert.assertEquals(3500000, result, 0.0001);
+    }
+
 
 }
 
