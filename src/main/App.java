@@ -10,11 +10,11 @@ public class App {
         do {
             System.out.println("\nUnit Converter Menu");
             System.out.println("--------------------");
-            System.out.println("1. Length Conversion");
-            System.out.println("2. Weight Conversion");
+            System.out.println("1. Time Conversion");
+            System.out.println("2. Volume Conversion");
             System.out.println("3. Temperature Conversion");
-            System.out.println("4. Time Conversion");
-            System.out.println("5. Volume Conversion");
+            System.out.println("4. Weight Conversion");
+            System.out.println("5. Length Conversion");
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
 
@@ -22,24 +22,19 @@ public class App {
 
             switch (choice) {
                 case 1:
-                    // Call function for length conversion
-                    lengthConversion();
+                    timeConversion();
                     break;
                 case 2:
-                    // Call function for weight conversion
-                    weightConversion();
+                    volumeConversion();
                     break;
                 case 3:
-                    // Call function for temperature conversion
                     temperatureConversion();
                     break;
                 case 4:
-                    // Call function for temperature conversion
-                    timeConversion();
+                    weightConversion();
                     break;
                 case 5:
-                    // Call function for temperature conversion
-                    volumeConversion();
+                    lengthConversion();
                     break;
                 case 6:
                     System.out.println("Exiting Unit Converter...");
@@ -52,16 +47,13 @@ public class App {
     }
 
     public static void lengthConversion() {
-        // Implement length conversion logic here
         System.out.println("Length Conversion Functionality");
     }
 
     public static void weightConversion() {
-        // Implement weight conversion logic here
         System.out.println("Weight Conversion Functionality");
     }
 
-    // this is volume
     public static void volumeConversion() {
         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
@@ -86,7 +78,6 @@ public class App {
 
             int option = scanner.nextInt();
             double value;
-            // make the code return to main menu
             if (option == 13) {
                 System.out.println("returning to main menu....");
                 break;
@@ -194,46 +185,38 @@ public class App {
 
         switch (tempChoice) {
             case 1:
-                // Get temperature in Celsius
                 System.out.print("Enter temperature in Celsius: ");
                 double celsius = scanner.nextDouble();
 
-                // Call method from TemperatureConverter class
                 double fahrenheit = TempConversion.celsiusToFahrenheit(celsius);
                 System.out.println(celsius + " degrees Celsius is equal to " + fahrenheit + " degrees Fahrenheit.");
                 break;
             case 2:
-                // Get temperature in Fahrenheit
                 System.out.print("Enter temperature in Fahrenheit: ");
                 fahrenheit = scanner.nextDouble();
 
-                // Call method from TemperatureConverter class
                 celsius = TempConversion.fahrenheitToCelsius(fahrenheit);
                 System.out.println(fahrenheit + " degrees Fahrenheit is equal to " + celsius + " degrees Celsius.");
                 break;
             case 3:
-                // Celsius to Kelvin
                 System.out.print("Enter temperature in Celsius: ");
                 celsius = scanner.nextDouble();
                 double kelvin = TempConversion.celsiusToKelvin(celsius);
                 System.out.println(celsius + " degrees Celsius is equal to " + kelvin + " degrees Kelvin.");
                 break;
             case 4:
-                // Kelvin to Celsius
                 System.out.print("Enter temperature in Kelvin: ");
                 kelvin = scanner.nextDouble();
                 celsius = TempConversion.kelvinToCelsius(kelvin);
                 System.out.println(kelvin + " degrees Kelvin is equal to " + celsius + " degrees Celsius.");
                 break;
             case 5:
-                // Fahrenheit to Kelvin
                 System.out.print("Enter temperature in Fahrenheit: ");
                 fahrenheit = scanner.nextDouble();
                 kelvin = TempConversion.fahrenheitToKelvin(fahrenheit);
                 System.out.println(fahrenheit + " degrees Fahrenheit is equal to " + kelvin + " degrees Kelvin.");
                 break;
             case 6:
-                // Kelvin to Fahrenheit
                 System.out.print("Enter temperature in Kelvin: ");
                 kelvin = scanner.nextDouble();
                 fahrenheit = TempConversion.kelvinToFahrenheit(kelvin);
@@ -312,6 +295,3 @@ public class App {
     }
 
 }
-
-//
-//

@@ -1,6 +1,8 @@
 package test;
 import org.junit.*;
 
+import main.WeightConverter;
+
 public class weightConverterTest {
     
     @Test
@@ -72,7 +74,5 @@ public class weightConverterTest {
     }
 }
 
-
-}
 
 
