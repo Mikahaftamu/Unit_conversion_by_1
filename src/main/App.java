@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -47,6 +48,7 @@ public class App {
     }
 
     public static void lengthConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println();
@@ -330,6 +332,7 @@ public class App {
     }
 
     public static void temperatureConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int tempChoice;
 
@@ -394,6 +397,7 @@ public class App {
     }
 
     public static void timeConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int tempChoice;
 
