@@ -47,7 +47,65 @@ public class App {
     }
 
     public static void lengthConversion() {
-        System.out.println("Length Conversion Functionality");
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println();
+            System.out.println("Select conversion option:");
+            System.out.println("_______________________________");
+            System.out.println("1. Convert from meters");
+            System.out.println("2. Convert from kilometers");
+            System.out.println("3. Convert from centimeters");
+            System.out.println("4. Convert from millimeters");
+            System.out.println("5. Back to Main Menu");
+            System.out.println("___________________________________");
+            System.out.print("Enter your choice: ");
+
+            int option = scanner.nextInt();
+            double value;
+            String unit;
+            if (option == 5) {
+                System.out.println("Returning to the main menu...");
+                break;
+            }
+            switch (option) {
+                case 1:
+                    System.out.print("Enter value in meters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (km, cm, mm): ");
+                    unit = scanner.next();
+                    double convertedValue1 = LengthConverter.convertFromMeters(value, unit);
+                    System.out.println(value + " meters = " + convertedValue1 + " " + unit);
+                    break;
+                case 2:
+                    System.out.print("Enter value in kilometers: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, cm, mm): ");
+                    unit = scanner.next();
+                    double convertedValue2 = LengthConverter.convertFromKilometer(value, unit);
+                    System.out.println(value + " kilometers = " + convertedValue2 + " " + unit);
+                    break;
+                case 3:
+                    System.out.print("Enter value in centimeters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, mm, km): ");
+                    unit = scanner.next();
+                    double convertedValue3 = LengthConverter.convertFromcentimeter(value, unit);
+                    System.out.println(value + " centimeters = " + convertedValue3 + " " + unit);
+                    break;
+                case 4:
+                    System.out.print("Enter value in millimeters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, cm, km): ");
+                    unit = scanner.next();
+                    double convertedValue4 = LengthConverter.convertFrommilimeter(value, unit);
+                    System.out.println(value + " millimeters = " + convertedValue4 + " " + unit);
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+        // scanner.close();
     }
 
     public static void weightConversion() {
