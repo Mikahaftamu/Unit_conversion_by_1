@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -331,6 +332,7 @@ public class App {
     }
 
     public static void temperatureConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int tempChoice;
 
@@ -395,6 +397,7 @@ public class App {
     }
 
     public static void timeConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int tempChoice;
 
