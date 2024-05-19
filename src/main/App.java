@@ -47,11 +47,174 @@ public class App {
     }
 
     public static void lengthConversion() {
-        System.out.println("Length Conversion Functionality");
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println();
+            System.out.println("Select conversion option:");
+            System.out.println("_______________________________");
+            System.out.println("1. Convert from meters");
+            System.out.println("2. Convert from kilometers");
+            System.out.println("3. Convert from centimeters");
+            System.out.println("4. Convert from millimeters");
+            System.out.println("5. Back to Main Menu");
+            System.out.println("___________________________________");
+            System.out.print("Enter your choice: ");
+
+            int option = scanner.nextInt();
+            double value;
+            String unit;
+            if (option == 5) {
+                System.out.println("Returning to the main menu...");
+                break;
+            }
+            switch (option) {
+                case 1:
+                    System.out.print("Enter value in meters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (km, cm, mm): ");
+                    unit = scanner.next();
+                    double convertedValue1 = LengthConverter.convertFromMeters(value, unit);
+                    System.out.println(value + " meters = " + convertedValue1 + " " + unit);
+                    break;
+                case 2:
+                    System.out.print("Enter value in kilometers: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, cm, mm): ");
+                    unit = scanner.next();
+                    double convertedValue2 = LengthConverter.convertFromKilometer(value, unit);
+                    System.out.println(value + " kilometers = " + convertedValue2 + " " + unit);
+                    break;
+                case 3:
+                    System.out.print("Enter value in centimeters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, mm, km): ");
+                    unit = scanner.next();
+                    double convertedValue3 = LengthConverter.convertFromcentimeter(value, unit);
+                    System.out.println(value + " centimeters = " + convertedValue3 + " " + unit);
+                    break;
+                case 4:
+                    System.out.print("Enter value in millimeters: ");
+                    value = scanner.nextDouble();
+                    System.out.print("Enter target unit (m, cm, km): ");
+                    unit = scanner.next();
+                    double convertedValue4 = LengthConverter.convertFrommilimeter(value, unit);
+                    System.out.println(value + " millimeters = " + convertedValue4 + " " + unit);
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+        // scanner.close();
     }
 
     public static void weightConversion() {
-        System.out.println("Weight Conversion Functionality");
+        @SuppressWarnings("resource")
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println();
+            System.out.println("Select conversion option:");
+            System.out.println("_______________________________");
+            System.out.println("1. Kilogram to Gram");
+            System.out.println("2. Gram to Kilogram");
+            System.out.println("3. Milligram to Gram");
+            System.out.println("4. Gram to Milligram");
+            System.out.println("5. Milligram to Kilogram");
+            System.out.println("6. Kilogram to Milligram");
+            System.out.println("7. Pound to Kilogram");
+            System.out.println("8. Kilogram to Pound");
+            System.out.println("9. Pound to Gram");
+            System.out.println("10. Gram to Pound");
+            System.out.println("11. Pound to Milligram");
+            System.out.println("12. Milligram to Pound");
+            System.out.println("13. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+
+            int option = scanner.nextInt();
+            double value;
+            if (option == 13) {
+                System.out.println("Returning to the main menu...");
+                break;
+            }
+            switch (option) {
+                case 1:
+                    System.out.print("Enter value in kilograms: ");
+                    value = scanner.nextDouble();
+                    double gram = WeightConverter.kilogramToGram(value);
+                    System.out.println(value + " kilograms = " + gram + " grams");
+                    break;
+                case 2:
+                    System.out.print("Enter value in grams: ");
+                    value = scanner.nextDouble();
+                    double kilogram = WeightConverter.gramToKilogram(value);
+                    System.out.println(value + " grams = " + kilogram + " kilograms");
+                    break;
+                case 3:
+                    System.out.print("Enter value in milligrams: ");
+                    value = scanner.nextDouble();
+                    double gram2 = WeightConverter.milligramToGram(value);
+                    System.out.println(value + " milligrams = " + gram2 + " grams");
+                    break;
+                case 4:
+                    System.out.print("Enter value in grams: ");
+                    value = scanner.nextDouble();
+                    double milligram = WeightConverter.gramToMilligram(value);
+                    System.out.println(value + " grams = " + milligram + " milligrams");
+                    break;
+                case 5:
+                    System.out.print("Enter value in milligrams: ");
+                    value = scanner.nextDouble();
+                    double kilogram2 = WeightConverter.milligramToKilogram(value);
+                    System.out.println(value + " milligrams = " + kilogram2 + " kilograms");
+                    break;
+                case 6:
+                    System.out.print("Enter value in kilograms: ");
+                    value = scanner.nextDouble();
+                    double milligram2 = WeightConverter.kilogramToMilligram(value);
+                    System.out.println(value + " kilograms = " + milligram2 + " milligrams");
+                    break;
+                case 7:
+                    System.out.print("Enter value in pounds: ");
+                    value = scanner.nextDouble();
+                    double kilogram3 = WeightConverter.poundToKilogram(value);
+                    System.out.println(value + " pounds = " + kilogram3 + " kilograms");
+                    break;
+                case 8:
+                    System.out.print("Enter value in kilograms: ");
+                    value = scanner.nextDouble();
+                    double pound = WeightConverter.kilogramToPound(value);
+                    System.out.println(value + " kilograms = " + pound + " pounds");
+                    break;
+                case 9:
+                    System.out.print("Enter value in pounds: ");
+                    value = scanner.nextDouble();
+                    double gram3 = WeightConverter.poundToGram(value);
+                    System.out.println(value + " pounds = " + gram3 + " grams");
+                    break;
+                case 10:
+                    System.out.print("Enter value in grams: ");
+                    value = scanner.nextDouble();
+                    double pound2 = WeightConverter.gramToPound(value);
+                    System.out.println(value + " grams = " + pound2 + " pounds");
+                    break;
+                case 11:
+                    System.out.print("Enter value in pounds: ");
+                    value = scanner.nextDouble();
+                    double milligram3 = WeightConverter.poundToMilligram(value);
+                    System.out.println(value + " pounds = " + milligram3 + " milligrams");
+                    break;
+                case 12:
+                    System.out.print("Enter value in milligrams: ");
+                    value = scanner.nextDouble();
+                    double pound3 = WeightConverter.milligramToPound(value);
+                    System.out.println(value + " milligrams = " + pound3 + " pounds");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+        // scanner.close();
     }
 
     public static void volumeConversion() {
