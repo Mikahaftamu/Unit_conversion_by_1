@@ -53,8 +53,36 @@ public class App {
 
     public static void lengthConversion() {
         // Implement length conversion logic here
-        System.out.println("Length Conversion Functionality");
-    }
+       
+            Scanner scanner = new Scanner(System.in);
+           int tempChoice;
+   
+           System.out.println("\n Length Conversion Submenu");
+           System.out.println("------------------------------");
+           System.out.println("1. Convert from Meters to...");
+           System.out.println("2. Convert from Kilometers to...");
+           System.out.println("3. Convert from Centimeters to...");
+           System.out.println("4. Convert from Milimeters to...");
+           System.out.print("Enter your choice: ");
+   
+           tempChoice = scanner.nextInt();
+   
+           switch (tempChoice) {
+               case 1:
+               LengthConverter.convertFromMetersMenu(); // 
+                  break;
+               case 2:
+               LengthConverter.convertFromKilometerMenu(); // 
+                   break;
+               case 3:
+               LengthConverter.convertFromcentimeterMenu();
+               case 4:
+               LengthConverter.convertFrommilimeterMenu();
+               break;
+               default:
+                   System.out.println("Invalid choice. Please try again.");
+           }
+       }
 
     public static void weightConversion() {
         // Implement weight conversion logic here
