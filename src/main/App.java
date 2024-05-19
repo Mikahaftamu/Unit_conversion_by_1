@@ -47,6 +47,7 @@ public class App {
     }
 
     public static void lengthConversion() {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println();
