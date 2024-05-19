@@ -3,21 +3,28 @@ package main;
 import java.util.Scanner;
 
 public class App {
+    @SuppressWarnings("unused")
     public static void main(String[] args) throws Exception {
         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         int choice;
-
+        final String RESET = "\u001B[0m";
+        final String RED = "\u001B[31m";
+        final String GREEN = "\u001B[32m";
+        final String YELLOW = "\u001B[33m";
+        final String BLUE = "\u001B[34m";
+        final String PURPLE = "\u001B[35m";
+        final String CYAN = "\u001B[36m";
         do {
-            System.out.println("\nUnit Converter Menu");
-            System.out.println("--------------------");
-            System.out.println("1. Time Conversion");
-            System.out.println("2. Volume Conversion");
-            System.out.println("3. Temperature Conversion");
-            System.out.println("4. Weight Conversion");
-            System.out.println("5. Length Conversion");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println(GREEN + "\nUnit Converter Menu" + RESET);
+            System.out.println(BLUE + "--------------------" + RESET);
+            System.out.println(YELLOW + "press 1. Time Conversion" + RESET);
+            System.out.println(YELLOW + "press 2. Volume Conversion" + RESET);
+            System.out.println(YELLOW + "press 3. Temperature Conversion" + RESET);
+            System.out.println(YELLOW + "press 4. Weight Conversion" + RESET);
+            System.out.println(YELLOW + "press 5. Length Conversion" + RESET);
+            System.out.println(RED + "press 6.To Exit" + RESET);
+            System.out.print(BLUE + "Enter your choice: " + RESET);
 
             choice = scanner.nextInt();
 
