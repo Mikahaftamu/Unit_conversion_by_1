@@ -55,7 +55,7 @@ public class App {
         // Implement length conversion logic here
        
             Scanner scanner = new Scanner(System.in);
-           int tempChoice;
+           int Choice;
    
            System.out.println("\n Length Conversion Submenu");
            System.out.println("------------------------------");
@@ -65,24 +65,21 @@ public class App {
            System.out.println("4. Convert from Milimeters to...");
            System.out.print("Enter your choice: ");
    
-           tempChoice = scanner.nextInt();
+              Choice = scanner.nextInt();
    
-           switch (tempChoice) {
+           switch (Choice) {
                case 1:
-               LengthConverter.convertFromMetersMenu(); // 
+               convertFromMetersMenu(); // 
                   break;
-               case 2:
-               LengthConverter.convertFromKilometerMenu(); // 
-                   break;
-               case 3:
-               LengthConverter.convertFromcentimeterMenu();
-               case 4:
-               LengthConverter.convertFrommilimeterMenu();
-               break;
+                  case 2:
+                  convertFromCentimeterMenu();
+                  break;
                default:
                    System.out.println("Invalid choice. Please try again.");
            }
-       }
+        }
+           
+
 
     public static void weightConversion() {
         // Implement weight conversion logic here
@@ -332,7 +329,70 @@ public class App {
         }
     }
 
+public static void convertFromMetersMenu() {
+    Scanner scanner = new Scanner(System.in);
+
+    while (true) {
+        System.out.println();
+        System.out.println("Select conversion option:");
+        System.out.println("_______________________________");
+        System.out.println("1. Convert from Meters to...");
+        System.out.println("2. Exit");
+        System.out.print("Enter your correct choice: ");
+
+        int option = scanner.nextInt();
+
+        if (option == 2) {
+            System.out.println("Exiting Length Converter...");
+            break;
+        }
+
+        System.out.print("Enter the value in meters: ");
+        double meters = scanner.nextDouble();
+
+        System.out.print("Enter the unit you want to convert to (cm, km, mm): ");
+        String unit = scanner.next().toLowerCase();
+
+        double convertedValue = LengthConverter.convertFromMeters(meters, unit);
+        System.out.println(meters + " meters is equal to " + convertedValue + " " + unit);
+    
+    scanner.close(); // Ensure resource closure to avoid leaks
+    }
+
 }
 
+public static void convertFromCentimeterMenu() {
+    Scanner scanner = new Scanner(System.in);
+
+    while (true) {
+        System.out.println();
+        System.out.println("Select conversion option:");
+        System.out.println("_______________________________");
+        System.out.println("1. Convert from CentiMetre to...");
+        System.out.println("2. Exit");
+        System.out.print("Enter your correct choice: ");
+
+        int option = scanner.nextInt();
+
+        if (option == 2) {
+            System.out.println("Exiting Length Converter...");
+            break;
+        }
+
+        System.out.print("Enter the value in centimeter: ");
+        double centi = scanner.nextDouble();
+
+        System.out.print("Enter the unit you want to convert to (km, m, mm): ");
+        String unit = scanner.next().toLowerCase();
+
+        double convertedValue = LengthConverter.convertFromcentimeter(centi, unit);
+        System.out.println(centi + " meters is equal to " + convertedValue + " " + unit);
+    
+    scanner.close(); // Ensure resource closure to avoid leaks
+    }
+
+}
+
+}
 //
 //
